@@ -27,6 +27,17 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" >
         </activity>
+
+        <activity
+            android:name="com.user.androidstudiolearn.FirstActivity"
+            android:label="This is First Activity">
+            <intent-filter>
+                <action android:name = "com.garretthh07.androidstudiolearn.ACTION_START" />
+                <category android:name = "android.intent.category.DEFAULT" />
+                <category android:name="com.garretthh07.androidstudiolearn.MY_CATEGORY" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
