@@ -58,10 +58,14 @@ public class FirstActivity extends BaseActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //启动自己， 测试入栈方式
                 //Intent intent = new Intent(FirstActivity.this, FirstActivity.class);
                 //startActivity(intent);
-                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
-                startActivity(intent);
+                //启动 SecondActivity
+                //Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                //startActivity(intent);
+                //SecondActivity 是别人写的
+                SecondActivity.actionStart(FirstActivity.this, "data1", "data2");
             }
         });
 

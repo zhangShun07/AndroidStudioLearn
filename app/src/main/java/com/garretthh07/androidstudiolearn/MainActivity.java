@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 
+import com.user.androidstudiolearn.ChapterActivity;
 import com.user.androidstudiolearn.FirstActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,13 +44,14 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
                 //显式启动 Activity
-                Intent intent = new Intent(MainActivity.this, FirstActivity.class);
+                //Intent intent = new Intent(MainActivity.this, FirstActivity.class);
                 //隐式启动 Activity
                 //Intent intent = new Intent(FIRSTACTIVITY_INTENT);
                 //intent.addCategory("com.garretthh07.androidstudiolearn.MY_CATEGORY");
                 //启动浏览器
                 //Intent intent = new Intent(Intent.ACTION_VIEW);
                 //intent.setData(Uri.parse("http://www.baidu.com"));
+                Intent intent = new Intent(MainActivity.this, ChapterActivity.class);
                 startActivity(intent);
             }
         });

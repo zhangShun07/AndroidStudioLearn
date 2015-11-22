@@ -53,7 +53,8 @@
             android:name="com.user.androidstudiolearn.DialogActivity"
             android:theme="@android:style/Theme.Dialog" />
         <activity android:name="com.user.androidstudiolearn.ThirdActivity" />
-        <activity android:name="com.user.androidstudiolearn.BaseActivity"></activity>
+        <activity android:name="com.user.androidstudiolearn.BaseActivity" />
+        <activity android:name="com.user.androidstudiolearn.ChapterActivity"></activity>
     </application>
 
 </manifest>
