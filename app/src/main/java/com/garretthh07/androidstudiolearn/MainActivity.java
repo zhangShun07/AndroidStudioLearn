@@ -6,14 +6,32 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+
+import com.user.androidstudiolearn.ChapterActivity;
+import com.user.androidstudiolearn.FirstActivity;
 
 public class MainActivity extends AppCompatActivity {
+    /**
+     * 当前类的 tag 值
+     */
+    private final String  TAG = "MainActivity";
+    /**
+     * 隐式启动FirstActivity 的条件
+     */
+    private  final  String FIRSTACTIVITY_INTENT = "com.garretthh07.androidstudiolearn.ACTION_START";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /**
+         * 隐藏标题栏
+         */
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -25,11 +43,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                //显式启动 Activity
+                //Intent intent = new Intent(MainActivity.this, FirstActivity.class);
+                //隐式启动 Activity
+                //Intent intent = new Intent(FIRSTACTIVITY_INTENT);
+                //intent.addCategory("com.garretthh07.androidstudiolearn.MY_CATEGORY");
+                //启动浏览器
+                //Intent intent = new Intent(Intent.ACTION_VIEW);
+                //intent.setData(Uri.parse("http://www.baidu.com"));
+                Intent intent = new Intent(MainActivity.this, ChapterActivity.class);
                 startActivity(intent);
             }
         });
+        Log.d(TAG, "onCreate execute");
     }
 
     @Override
