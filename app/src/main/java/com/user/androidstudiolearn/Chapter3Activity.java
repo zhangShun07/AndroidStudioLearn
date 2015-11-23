@@ -11,7 +11,7 @@ import com.garretthh07.androidstudiolearn.R;
 public class Chapter3Activity extends Activity {
     /**
      * 提供给外部的类方法, 快速创建这个 Activity, 可以不用协商传递参数的命名
-     * @param context
+     * @param context: 前一个Activity的句柄
      */
     public static void actionStart(Context context) {
         Intent intent = new Intent(context, Chapter3Activity.class);
