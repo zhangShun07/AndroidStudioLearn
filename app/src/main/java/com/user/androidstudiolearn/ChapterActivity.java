@@ -17,6 +17,7 @@ public class ChapterActivity extends Activity {
 
         setContentView(R.layout.chapter_layout);
 
+        //第二章节以前的内容
         Button chapter2Btn = (Button)findViewById(R.id.chapter_2);
         chapter2Btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,5 +26,15 @@ public class ChapterActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+        //第三章节的内容
+        Button chapter3Btn = (Button)findViewById(R.id.chapter_3);
+        chapter3Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Chapter3Activity.actionStart(ChapterActivity.this);
+            }
+        });
+
     }
 }
