@@ -1,10 +1,10 @@
 package com.garretthh07.androidstudiolearn;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -15,7 +15,7 @@ import android.view.Window;
 import com.user.androidstudiolearn.ChapterActivity;
 import com.user.androidstudiolearn.FirstActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     /**
      * 当前类的 tag 值
      */
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
